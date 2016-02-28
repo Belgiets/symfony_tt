@@ -1,0 +1,23 @@
+{% extends "base.html.twig" %}
+{% block title %}Admin{% endblock %}
+{% block body %}
+    <h1>Admin page</h1>
+    <a href="">create a new one</a>
+    <h2>Users</h2>
+    {% for person in persons %}
+        <div class="row">
+            <div class="col-xs-12 col-sm-3">
+                {{ person.fname }}
+            </div>
+            <div class="col-xs-12 col-sm-3">
+                {{ person.lname }}
+            </div>
+            <div class="col-xs-12 col-sm-3">
+                <a href="{{ absolute_url(path("user_show", {'userId': person.id})) }}">detail</a>
+            </div>
+            <div class="col-xs-12 col-sm-3">
+                <a href="{{ absolute_url(path("user_delete", {'userId': person.id})) }}">delete</a>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
