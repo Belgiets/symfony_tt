@@ -14,7 +14,7 @@ class Message
 {
     /**
      * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Person", inversedBy="messages")
-     * @ORM\JoinColumn(name="person_id", referencedColumnName="id")
+     * @ORM\JoinColumn(name="person_id", referencedColumnName="id", onDelete="CASCADE")
      */
     protected $person;
 
