@@ -1,0 +1,9 @@
+{% extends "base.html.twig" %}
+{% block title %}Create user{% endblock %}
+{% block body %}
+    <h1>Create user</h1>
+    <a href="{{ absolute_url(path('admin')) }}">back</a>
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
+{% endblock %}
