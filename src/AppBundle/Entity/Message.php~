@@ -30,7 +30,7 @@ class Message
     /**
      * @var int
      *
-     * @ORM\Column(name="person_id", type="integer")
+     * @ORM\Column(name="person_id", type="integer", unique=true)
      */
     private $personId;
 
@@ -130,28 +130,5 @@ class Message
     {
         return $this->body;
     }
-
-    /**
-     * Set person
-     *
-     * @param \AppBundle\Entity\Person $person
-     *
-     * @return Message
-     */
-    public function setPerson(\AppBundle\Entity\Person $person = null)
-    {
-        $this->person = $person;
-
-        return $this;
-    }
-
-    /**
-     * Get person
-     *
-     * @return \AppBundle\Entity\Person
-     */
-    public function getPerson()
-    {
-        return $this->person;
-    }
 }
+

@@ -14,7 +14,7 @@ use Doctrine\ORM\Mapping as ORM;
 class Person
 {
     /**
-     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Message", mappedBy="person")
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Message", mappedBy="personId")
      */
     protected $messages;
 
@@ -135,38 +135,5 @@ class Person
     {
         return $this->email;
     }
-
-    /**
-     * Add message
-     *
-     * @param \AppBundle\Entity\Message $message
-     *
-     * @return Person
-     */
-    public function addMessage(\AppBundle\Entity\Message $message)
-    {
-        $this->messages[] = $message;
-
-        return $this;
-    }
-
-    /**
-     * Remove message
-     *
-     * @param \AppBundle\Entity\Message $message
-     */
-    public function removeMessage(\AppBundle\Entity\Message $message)
-    {
-        $this->messages->removeElement($message);
-    }
-
-    /**
-     * Get messages
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getMessages()
-    {
-        return $this->messages;
-    }
 }
+
