@@ -2,7 +2,7 @@
 {% block title %}Admin{% endblock %}
 {% block body %}
     <h1>Admin page</h1>
-    <a href="{{ absolute_url(path("user_create")) }}">create a new one</a>
+    <a href="{{ absolute_url(path("user_create")) }}">create a new user</a>
     <h2>Users</h2>
     {% for person in persons %}
         <div class="row">

@@ -37,11 +37,11 @@ bazinga_faker:
     orm: doctrine
     entities:
         AppBundle\Entity\Person:
-            number: 1
+            number: 10
             custom_formatters:
                 fname: { method: firstname, parameters: [ '??????????' ] }
                 lname: { method: lastname, parameters: [ '??????????' ] }
         AppBundle\Entity\Message:
-            number: 1
+            number: 10
             custom_formatters:
                 topic: { method: lexify, parameters: [ 'topic ??????????' ] }
