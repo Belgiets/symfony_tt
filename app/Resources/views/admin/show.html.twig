@@ -13,7 +13,7 @@
         <div class="col-xs-12 col-sm-6">
             {% set messages = person.messages.getValues %}
             {% for message in messages %}
-                <div>
+                <div class="msg">
                     <h4>{{ message.topic }}</h4>
                     <p>{{ message.body }}</p>
                 </div>
