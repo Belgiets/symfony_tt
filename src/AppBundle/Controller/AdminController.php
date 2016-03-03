@@ -67,7 +67,8 @@ class AdminController extends Controller
 
             return $this->render('admin/status.html.twig', [
                 'person'    => $person,
-                'operation' => 'send message'
+                'operation' => 'send message',
+                'back'      => 'user_show'
             ]);
         }
 

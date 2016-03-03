@@ -1,3 +1,48 @@
-div {
+.msg {
   width: 80%;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  padding: 10px;
+  word-wrap: break-word;
+
+  &:nth-child(odd) {
+    float: left;
+    background: #90C3D4;
+  }
+
+  &:nth-child(even) {
+    float: right;
+    background: #90A6AD;
+  }
+}
+
+label {
+  display: block;
+  margin: 20px 0 15px;
+}
+
+label,
+input {
+  width: 100%;
+}
+
+.mailform {
+  textarea {
+    width: 100%;
+    min-height: 200px;
+  }
+}
+
+button {
+  margin: 20px 0 0;
+  padding: 5px 25px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 0;
+  outline: none;
+  float: right;
+
+  &:active {
+    background: #90C3D4;
+  }
 }

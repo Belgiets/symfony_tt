@@ -3,7 +3,29 @@
 {% block body %}
     <h1>Create user</h1>
     <a href="{{ absolute_url(path('admin')) }}">back</a>
-    {{ form_start(form) }}
-    {{ form_widget(form) }}
-    {{ form_end(form) }}
+    <div class="row">
+        <div class="col-xs-12 col-sm-4">
+            {{ form_start(form) }}
+            {{ form_errors(form) }}
+            <div>
+                {{ form_label(form.fname, 'first name') }}
+                {{ form_errors(form.fname) }}
+                {{ form_widget(form.fname) }}
+            </div>
+            <div>
+                {{ form_label(form.lname, 'last name') }}
+                {{ form_errors(form.lname) }}
+                {{ form_widget(form.lname) }}
+            </div>
+            <div>
+                {{ form_label(form.email, 'email') }}
+                {{ form_errors(form.email) }}
+                {{ form_widget(form.email) }}
+            </div>
+            <div>
+                {{ form_widget(form.save) }}
+            </div>
+            {{ form_end(form) }}
+        </div>
+    </div>
 {% endblock %}
