@@ -5,7 +5,7 @@
     <a href="{{ absolute_url(path('admin')) }}">back</a>
     <div class="row">
         <div class="col-xs-12 col-sm-4">
-            {{ form_start(form) }}
+            {{ form_start(form, {'attr': {'id': 'createForm', 'novalidate': 'novalidate'}}) }}
             {{ form_errors(form) }}
             <div>
                 {{ form_label(form.fname, 'first name') }}
