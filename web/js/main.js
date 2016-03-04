@@ -23,6 +23,14 @@ $(document).ready(function() {
             "form[email]": {
                 email: true
             }
+        },
+        messages: {
+            "form[fname]": {
+                user_names: 'Please specify the correct first name'
+            },
+            "form[lname]": {
+                user_names: 'Please specify the correct last name'
+            }
         }
     });
 

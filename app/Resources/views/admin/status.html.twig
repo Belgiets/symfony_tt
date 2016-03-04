@@ -3,10 +3,12 @@
 {% block body %}
     <h1>Status page</h1>
     <a href="{{ absolute_url(path('admin')) }}">to admin page</a>
-    {% if back is defined %}
-        or <a href="{{ absolute_url(path(back, {'userId': person.id})) }}">back</a>
+    {% if person != null %}
+        {% if back is defined %}
+            or <a href="{{ absolute_url(path(back, {'userId': person.id})) }}">back</a>
+        {% endif %}
+        <p>{{ person.fname }} {{ person.lname }}</p>
+        <p>operation - {{ operation }}</p>
+        <p>status - successful</p>
     {% endif %}
-    <p>{{ person.fname }} {{ person.lname }}</p>
-    <p>operation - {{ operation }}</p>
-    <p>status - successful</p>
 {% endblock %}

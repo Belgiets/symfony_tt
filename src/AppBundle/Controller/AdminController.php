@@ -87,8 +87,10 @@ class AdminController extends Controller
         $person = $em->getRepository('AppBundle:Person')
             ->find($userId);
 
-        $em->remove($person);
-        $em->flush();
+        if (!empty($person)) {
+            $em->remove($person);
+            $em->flush();
+        }
 
         return $this->render('admin/status.html.twig', [
             'person'    => $person,

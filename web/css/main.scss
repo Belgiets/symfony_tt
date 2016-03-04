@@ -21,6 +21,11 @@ label {
   margin: 20px 0 15px;
 }
 
+label.error {
+  color: red;
+  margin-top: 5px;
+}
+
 label,
 input {
   width: 100%;
@@ -44,5 +49,16 @@ button {
 
   &:active {
     background: #90C3D4;
+  }
+}
+
+#createForm {
+  ul {
+    padding: 0;
+    list-style-type: none;
+
+    & > li {
+      color: red;
+    }
   }
 }

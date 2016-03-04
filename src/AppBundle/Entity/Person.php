@@ -4,12 +4,15 @@ namespace AppBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * Person
  *
  * @ORM\Table(name="person")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\PersonRepository")
+ * @UniqueEntity("email")
  */
 class Person
 {
@@ -36,6 +39,7 @@ class Person
      * @var string
      *
      * @ORM\Column(name="fname", type="string", length=255)
+     * @Assert\NotBlank()
      */
     private $fname;
 
@@ -43,6 +47,7 @@ class Person
      * @var string
      *
      * @ORM\Column(name="lname", type="string", length=255)
+     * @Assert\NotBlank()
      */
     private $lname;
 
@@ -50,6 +55,7 @@ class Person
      * @var string
      *
      * @ORM\Column(name="email", type="string", length=255, unique=true)
+     * @Assert\Email()
      */
     private $email;
 
